@@ -4,12 +4,84 @@
     <title>Castly</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- DESGIN -->
+    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+        <meta name="keywords" content="">
+		<!-- Favicon -->
+        <link href="../assets/images/favicon.png" rel="shortcut icon">
+		<!-- CSS -->
+		<link href="../assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+		<link href="../assets/plugins/owl-carousel/owl.carousel.min.css" rel="stylesheet">
+		<link href="../assets/plugins/owl-carousel/owl.theme.default.min.css" rel="stylesheet">
+		<link href="../assets/plugins/magnific-popup/magnific-popup.min.css" rel="stylesheet">
+		<link href="../assets/css/app.css" rel="stylesheet">
+		<!-- Fonts/Icons -->
+		<link href="../assets/plugins/font-awesome/css/all.css" rel="stylesheet">
+		<link href="../assets/plugins/themify/themify-icons.min.css" rel="stylesheet">
+		<!-- end -->
   </head>
 
   <body>
+    <header>
+			<nav class="navbar navbar-absolute"><!-- add 'navbar-dark/navbar-grey/navbar-transparent/navbar-transparent-dark' -->
+				<div class="container">
+					<ul class="list-horizontal-unstyled">
+						<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+						<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+					</ul>
+					<a class="position-center" href="#">
+						<h4>mono</h4>
+					</a>
+					<!-- Toggle button of Fullscreen menu -->
+					<button class="fullscreen-toggle-btn">
+			            <span class="lines"></span>
+			        </button>
+				</div><!-- end container -->
+			</nav><!-- end navbar -->
+			
+			<div class="fullscreen-menu bg-black"><!-- Add your background class here -->
+				<div class="fullscreen-menu-wrapper text-center">
+					<div class="position-top">
+						<h3>mono</h3>
+					</div>
+					<div class="position-middle">
+						<ul class="list-horizontal-unstyled">
+							<li>
+								<h2><a class="hyperlink-7" href="#">Home</a></h2>
+							</li>
+							<li>
+								<h2><a class="hyperlink-7" href="#">About</a></h2>
+							</li>
+							<li>
+								<h2><a class="hyperlink-7" href="#">Portfolio</a></h2>
+							</li>
+							<li>
+								<h2><a class="hyperlink-7" href="#">Blog</a></h2>
+							</li>
+							<li>
+								<h2><a class="hyperlink-7" href="#">Shop</a></h2>
+							</li>
+						</ul>
+					</div>
+					<div class="position-bottom">
+						<ul class="list-horizontal-unstyled icon-sm">
+							<li><a class="button-circle button-circle-sm button-border-1px button-circle-outline-white" href="#"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a class="button-circle button-circle-sm button-border-1px button-circle-outline-white" href="#"><i class="fab fa-twitter"></i></a></li>
+							<li><a class="button-circle button-circle-sm button-border-1px button-circle-outline-white" href="#"><i class="fab fa-pinterest"></i></a></li>
+							<li><a class="button-circle button-circle-sm button-border-1px button-circle-outline-white" href="#"><i class="fab fa-instagram"></i></a></li>
+						</ul>
+						<p class="margin-top-20">&copy; 2018 FlaTheme, All Rights Reserved.</p>
+					</div>
+				</div>
+				<!-- end fullscreen-menu-wrapper -->
+			</div>
+			<!-- end fullscreen-menu -->
+		</header>
     <%= yield %>
   </body>
 </html>
