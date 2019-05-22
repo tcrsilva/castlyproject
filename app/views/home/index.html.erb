@@ -1,16 +1,13 @@
 <html>
 	<body data-preloader="2">
 		<!-- Home section -->
-		<div class="section-fullscreen bg-image parallax" style="background-image: url(../assets/images/background.jpg)">
-			<div class="bg-black-06">
+		<%#= video_tag("video.kk" class="section-fullscreen bg-image parallax")%>
+			<div class="bg-black-6">
 				<div class="container text-center">
-					<div class="position-middle">
-						<h1 class="display-4 font-weight-thin">Creative Photographer</h1>
-					</div>
 					<!-- scrolldown button -->
 					<div class="position-bottom">
 						<a class="scrolldown icon-lg" href="#about">
-							<i class="ti-arrow-down"></i>
+							<i class="ti-arrow-down">AAAAAA</i>
 						</a>
 					</div>
 				</div>
@@ -21,13 +18,14 @@
 
 		<!-- About section -->
 		<div id="about" class="section">
-			<div class="container">
+			><div class="container">
 				<div class="row">
 					<div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-						<img class="img-circle-lg margin-bottom-30" src="../assets/images/img-circle-large.jpg">
-						<h5>Johnny Doe</h5>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-						<a class="button button-lg button-fill-right-outline margin-top-30" href="#">More About Me</a>
+						<%= image_tag("C.png", class:"img-circle-lg margin-bottom-30") %>
+						<h5>Sobre Nós</h5>
+						<p>“Entendemos que muitas vezes pode ser complexo e difícil encontrar profissionais com as qualidades e o perfil desejado para a produção de conteúdo da sua empresa, por isso conte com o Castly para realizar o processo de ponta a ponta sem complicações.”</p>
+						<br>
+						<%= link_to 'SAIBA MAIS', sobre_index_path, class: "button button-lg button-fill-right-outline margin-top-30"%>
 					</div>
 				</div><!-- end row -->
 			</div><!-- end container -->
@@ -36,15 +34,19 @@
 
 		<!-- Gallery section -->
 		<div class="section no-padding">
-			<div class="container-fluid">
+			<div class="container text-center">
+			<!--div class="container-fluid"-->
+				<div class="position-middle">
+					<h1 class="display-4 font-weight-thin">Categorias Profissionais</h1>
+				</div>
 				<div class="row col-spacing-10">
 					<!-- 1 -->
 					<div class="col-12 col-md-6">
 						<div class="hoverbox-8">
 							<a href="#">
-								<img src="../assets/images/col-1.jpg" alt="">
-								<div class="content">
-									<h6 class="heading-uppercase no-margin">Art, Painting</h6>
+								<%= image_tag("1100.png") %>
+								<div class="content"><!--COMENTADO NO CSS-->
+									<h6 class="heading-uppercase no-margin">CONCEPT</h6>
 								</div>
 							</a>
 						</div>
@@ -53,9 +55,9 @@
 					<div class="col-12 col-md-6">
 						<div class="hoverbox-8">
 							<a href="#">
-								<img src="../assets/images/col-1.jpg" alt="">
+								<%= image_tag("1100.png") %>
 								<div class="content">
-									<h6 class="heading-uppercase no-margin">Fashion</h6>
+									<h6 class="heading-uppercase no-margin">CONCIERGE</h6>
 								</div>
 							</a>
 						</div>
@@ -64,9 +66,9 @@
 					<div class="col-12 col-md-6">
 						<div class="hoverbox-8">
 							<a href="#">
-								<img src="../assets/images/col-1.jpg" alt="">
+								<%= image_tag("1100.png") %>
 								<div class="content">
-									<h6 class="heading-uppercase no-margin">Nature</h6>
+									<h6 class="heading-uppercase no-margin">INFLUENCE</h6>
 								</div>
 							</a>
 						</div>
@@ -75,9 +77,9 @@
 					<div class="col-12 col-md-6">
 						<div class="hoverbox-8">
 							<a href="#">
-								<img src="../assets/images/col-1.jpg" alt="">
+								<%= image_tag("1100.png") %>
 								<div class="content">
-									<h6 class="heading-uppercase no-margin">City at Night</h6>
+									<h6 class="heading-uppercase no-margin">EVENTS</h6>
 								</div>
 							</a>
 						</div>
@@ -86,10 +88,10 @@
 			</div><!-- end container-fluid -->
 		</div>
 		<!-- end Gallery section -->
-
+<br>
 		<div class="section-sm text-center">
 			<div class="container-fluid">
-				<a class="text-btn" href="#">View All Works</a>
+				<%= link_to 'VER TODOS', servicos_index_path, class:"text-btn" %>
 			</div><!-- end container-fluid -->
 		</div>
 	</body>

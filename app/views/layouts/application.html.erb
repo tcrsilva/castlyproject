@@ -7,11 +7,11 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <!-- DESGIN -->
-		  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="keywords" content="">
-		<!-- Favicon --
-      <= favicon_link_tag asset_path('iconcrabs.png') %>
-		-- CSS -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     	<meta name="keywords" content="">
+	<!-- Favicon -->
+      <%= favicon_link_tag asset_path('C.png') %>
+	<!-- CSS -->
 		<!-- Fonts/Icons 
 		<link href="app/assets/plugins/font-awesome/css/all.css" rel="stylesheet">
 		<link href="app/assets/plugins/themify/themify-icons.min.css" rel="stylesheet">-->
@@ -21,15 +21,11 @@
     <header>
 			<nav class="navbar navbar-absolute"><!-- add 'navbar-dark/navbar-grey/navbar-transparent/navbar-transparent-dark' -->
 				<div class="container">
-					<ul class="list-horizontal-unstyled">
-					  <!--COLOCAR ICONES DE IMAGENS-->
-						<%= link_to 'F', root_path, class:"fab fa-facebook-f" %>
-						<%= link_to 'T', root_path, class:"fab fa-twitter" %>
-						<%= link_to 'P', root_path, class:"fab fa-pinterest" %>
-					</ul>
-					<a class="position-center" href="#">
-						<h4>castly</h4>
-					</a>
+					<div class="list-horizontal-unstyled">
+						<%= link_to '', root_path, class:"fa fa-facebook-f" %>
+						<%= link_to '', root_path, class:"fa fa-twitter" %>
+						<%= link_to '', root_path, class:"fa fa-pinterest" %>
+					</div>
 					<!-- Toggle button of Fullscreen menu -->
 					<button class="fullscreen-toggle-btn">
 			       <span class="lines"></span>
@@ -43,48 +39,74 @@
 						<h3>castly</h3>
 					</div>
 					<div class="position-middle">
-						<ul class="list-horizontal-unstyled">
-							<li>
-								<h2><%= link_to 'Home', root_path, class:"hyperlink-7" %></h2>
-							</li>
-							
-							<li>
-								<h2><%= link_to 'About', servicos_index_path, class:"hyperlink-7" %></h2>
-							</li>
-							<li>
-								<h2><%= link_to 'Portfolio', portfolio_index_path, class:"hyperlink-7" %></h2>
-							</li>
-							<li>
-								<h2><%= link_to 'Clientes', clientes_index_path, class:"hyperlink-7" %></h2>
-							</li>
-							<li>
-								<h2><%= link_to 'Shop', root_path, class:"hyperlink-7" %></h2>
-							</li>
-						</ul>
+						<div class="list-horizontal-unstyled">
+								<h2><a><%= link_to 'HOME', root_path, class:"hyperlink-7" %></a></h2>
+								<h2><%= link_to 'SOBRE', sobre_index_path, class:"hyperlink-7" %></h2>
+								<h2><%= link_to 'SERVIÇOS', servicos_index_path, class:"hyperlink-7" %></h2>
+								<h2><%= link_to 'PORTFÓLIO', portfolio_index_path, class:"hyperlink-7" %></h2>
+								<h2><%= link_to 'CLIENTES', clientes_index_path, class:"hyperlink-7" %></h2>
+								<!--FAZER SCAFFOLD-->
+								<h2><%= link_to 'CONTATO', root_path, class:"hyperlink-7" %></h2>
+						</div>
 					</div>
+					<br>
 				</div>
 				<!-- end fullscreen-menu-wrapper -->
 			</div>
 			<!-- end fullscreen-menu -->
 		</header>
-    <%= yield %>
     
+    <%= yield %>
+    <br>
     <footer>
-      <div class="footer bg-dark">
-				<div class="container">
+    	<div class="footer bg-dark">
+    		<br>
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md-6 col-lg-3">
+						<h3 class="no-margin">castly</h3>
+					</div>
+					<div class="col-12 col-md-6 col-lg-3">
+						<h6 class="heading-uppercase">Useful Links</h6>
+						<ul class="list-icon list-icon-arrow">
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Team</a></li>
+							<li><a href="#">Prices</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</div>
+					<div class="col-12 col-md-6 col-lg-3">
+						<h6 class="heading-uppercase">Additional Links</h6>
+						<ul class="list-icon list-icon-arrow">
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Process</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">Careers</a></li>
+						</ul>
+					</div>
+					<div class="col-12 col-md-6 col-lg-3">
+						<h6 class="heading-uppercase">Contact Info</h6>
+						<ul class="list-unstyled">
+							<li>121 King St, Melbourne VIC 3000</li>
+							<li>agencyclassic@email.com</li>
+							<li>+(123) 456 789 01</li>
+						</ul>
+					</div>
+				</div>
+		<br><!-- um footer para todas as páginas= home + clientes -->
 					<div class="row align-items-center">
 						<div class="col-12 col-md-4 text-center text-md-left">
-							<h4 class="no-margin">Castly</h4>
+							
 						</div>
 						<div class="col-12 col-md-4 text-center">
 							<p>&copy; 2018 FlaTheme, All Rights Reserved.</p>
 						</div>
 						<div class="col-12 col-md-4 text-center text-md-right">
 							<ul class="list-horizontal-unstyled">
-								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fab fa-pinterest"></i></a></li>
-								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+								<%= link_to '', root_path, class:"fa fa-facebook-f"%>
+								<%= link_to '', root_path, class:"fa fa-twitter" %>
+								<%= link_to '', root_path, class:"fa fa-pinterest" %>
+								<%= link_to '', root_path, class:"fa fa-instagram" %>
 							</ul>
 						</div>
 					</div><!-- end row -->
